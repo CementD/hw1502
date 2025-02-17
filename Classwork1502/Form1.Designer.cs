@@ -34,6 +34,8 @@
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             button3 = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -84,11 +86,26 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button4
+            // 
+            button4.Location = new Point(619, 49);
+            button4.Name = "button4";
+            button4.Size = new Size(142, 29);
+            button4.TabIndex = 5;
+            button4.Text = "Додати файл";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
@@ -108,5 +125,7 @@
         private PictureBox pictureBox1;
         private TextBox textBox1;
         private Button button3;
+        private OpenFileDialog openFileDialog1;
+        private Button button4;
     }
 }

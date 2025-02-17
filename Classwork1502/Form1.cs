@@ -57,6 +57,15 @@ namespace Classwork1502
             }
         }
 
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Choose File";
+            openFileDialog1.Filter = "Зображення|*.png;*.jpeg;*.jpg;*.gif";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var filePath = openFileDialog1.FileName;
+                imagePaths.Add(filePath);
+            }
+        }
     }
 }

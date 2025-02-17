@@ -32,13 +32,21 @@ namespace Classwork1502
 
         private void button1_Click(object sender, EventArgs e)
         {
-            currentIndex = (currentIndex - 1 + imagePaths.Count) % imagePaths.Count;
+            currentIndex--;
+            if (currentIndex < 0)
+            {
+                currentIndex = imagePaths.Count - 1;
+            }
             DisplayImage();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            currentIndex = (currentIndex + 1) % imagePaths.Count;
+            currentIndex++;
+            if (currentIndex > imagePaths.Count - 1)
+            {
+                currentIndex = 0;
+            }
             DisplayImage();
         }
 
